@@ -8,6 +8,16 @@ from jqdatasdk.technical_analysis import *
 from Quant.libs.utility.time_util import TimeHelper
 
 
+def boll_choice_view(request):
+    """
+    布林选股
+    :param request:
+    :return:
+    """
+    result = get_two_at_once(today_date=TimeHelper.today())
+    ...
+
+
 def get_two_at_once(today_date=TimeHelper.today()):
     # 获取最近的两个交易日
     two_day_list = get_trade_days(end_date=today_date, count=2)
